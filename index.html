@@ -90,13 +90,13 @@
 				<!-- Carousel -->
 				<section id="five" class="carousel">
 					<div id="carousel-bg-container">
-						<video data-project="p1" muted loop><source src="videos/dalba-03_UcKrr4eq.mp4" type="video/mp4"></video>
-						<video data-project="p2" muted loop><source src="videos/3m-02_X6OQ9Q7C.mp4" type="video/mp4"></video>
-						<video data-project="p3" muted loop><source src="videos/hanes-02_6CDcGL8S.mp4" type="video/mp4"></video>
-						<video data-project="p4" muted loop><source src="videos/bench-03_2mowGWyP.mp4" type="video/mp4"></video>
-						<video data-project="p5" muted loop><source src="videos/huggies-02_f2axBbJY.mp4" type="video/mp4"></video>
-						<video data-project="p6" muted loop><source src="videos/events-portrait-04_Ymu9Nn8Q.mp4" type="video/mp4"></video>
-						<video data-project="p7" muted loop><source src="videos/others_trim_01.mp4" type="video/mp4"></video>
+						<video data-project="p1" muted loop controlslist="nodownload"><source src="videos/dalba-03_UcKrr4eq.mp4" type="video/mp4"></video>
+						<video data-project="p2" muted loop controlslist="nodownload"><source src="videos/3m-02_X6OQ9Q7C.mp4" type="video/mp4"></video>
+						<video data-project="p3" muted loop controlslist="nodownload"><source src="videos/hanes-02_6CDcGL8S.mp4" type="video/mp4"></video>
+						<video data-project="p4" muted loop controlslist="nodownload"><source src="videos/bench-03_2mowGWyP.mp4" type="video/mp4"></video>
+						<video data-project="p5" muted loop controlslist="nodownload"><source src="videos/huggies-02_f2axBbJY.mp4" type="video/mp4"></video>
+						<video data-project="p6" muted loop controlslist="nodownload"><source src="videos/events-portrait-04_Ymu9Nn8Q.mp4" type="video/mp4"></video>
+						<video data-project="p7" muted loop controlslist="nodownload"><source src="videos/others_trim_01.mp4" type="video/mp4"></video>
 					</div>
 					<div class="container">
 						<header class="major">
@@ -274,7 +274,16 @@
 						aboutSection.removeClass('image-active');
 					});
 				});
+			</script>			
+			<script>
+    			document.addEventListener('DOMContentLoaded', function() {
+       				 const videos = document.querySelectorAll('video');
+        			videos.forEach(function(video) {
+            			video.addEventListener('contextmenu', function(e) {
+               				 e.preventDefault();
+            			});
+       				 });
+   				 });
 			</script>
-
 	</body>
 </html>
